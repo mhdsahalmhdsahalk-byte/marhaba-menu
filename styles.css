@@ -1,0 +1,101 @@
+/* Full-screen PDF-only website */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #1a1a1a;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ---- Full-screen PDF (desktop) ---- */
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.pdf-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* ---- Mobile fallback (hidden on desktop) ---- */
+.mobile-fallback {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pdf-viewer {
+        display: none;
+    }
+
+    .mobile-fallback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: #0a0a0f;
+        padding: 20px;
+    }
+
+    .fallback-card {
+        text-align: center;
+        max-width: 340px;
+        width: 100%;
+    }
+
+    .fallback-icon {
+        font-size: 64px;
+        margin-bottom: 20px;
+    }
+
+    .fallback-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #d4a843;
+        margin-bottom: 4px;
+    }
+
+    .fallback-subtitle {
+        font-size: 12px;
+        letter-spacing: 4px;
+        color: #888;
+        margin-bottom: 24px;
+    }
+
+    .fallback-desc {
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 28px;
+        line-height: 1.6;
+    }
+
+    .fallback-btn {
+        display: block;
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #d4a843, #f0d27a);
+        color: #0a0a0f;
+    }
+
+    .fallback-btn--alt {
+        background: transparent;
+        border: 1px solid rgba(212, 168, 67, 0.3);
+        color: #d4a843;
+    }
+}

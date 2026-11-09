@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Marhaba Al Shuwaikh Menu | مرحبا العالمية - القائمة</title>
+    <meta name="description" content="Marhaba Al Shuwaikh Restaurant Menu - Breakfast, Biriyani, Rolls, Grills, Curries. Free Home Delivery. Call: 55693542">
+    <meta name="theme-color" content="#0a0a0f">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Full-screen PDF viewer -->
+    <div class="pdf-viewer" id="pdfViewer">
+        <iframe
+            src="marhabaAlShuwaikh-Menu.pdf"
+            id="pdfFrame"
+            class="pdf-frame"
+            title="Marhaba Al Shuwaikh Menu"
+        ></iframe>
+    </div>
+
+    <!-- Mobile fallback (phones can't embed PDFs) -->
+    <div class="mobile-fallback" id="mobileFallback">
+        <div class="fallback-card">
+            <div class="fallback-icon">📄</div>
+            <h1 class="fallback-title">مرحبا العالمية</h1>
+            <p class="fallback-subtitle">MARHABA AL SHUWAIKH</p>
+            <p class="fallback-desc">Tap below to view the menu<br>اضغط لعرض القائمة</p>
+            <a href="marhabaAlShuwaikh-Menu.pdf" target="_blank" class="fallback-btn" id="openPdfBtn">
+                Open Menu · فتح القائمة
+            </a>
+            <a href="marhabaAlShuwaikh-Menu.pdf" download class="fallback-btn fallback-btn--alt" id="downloadPdfBtn">
+                Download · تحميل
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
